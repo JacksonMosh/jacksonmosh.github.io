@@ -101,7 +101,7 @@ window.addEventListener("mousemove", function (e) {
     let htmlHeight = document.documentElement.clientHeight;
     let offsetWidth = (e.clientX) - (htmlWidth / 2);
     let offsetHeight = (e.clientY) - (htmlHeight);
-
+    console.log(offsetHeight);
     let offsetWidthBg = ((e.clientX) - (htmlWidth / 2));
     let offsetHeightBg = ((e.clientY) - (htmlHeight / 2));
 
