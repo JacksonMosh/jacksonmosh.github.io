@@ -29,7 +29,14 @@ html {
 body {
     background: var(--color-bg);
     color: var(--color-light);
+
 }
+
+body.lock {
+    overflow: hidden;
+}
+
+
 
 h1,
 h2,
@@ -137,6 +144,11 @@ img {
     object-fit: cover;
 }
 
+
+
+
+
+
 /* .......................Start Aside Bar ......................... */
 aside {
     width: 320px;
@@ -235,38 +247,12 @@ main {
     margin-right: auto;
 }
 
-.cursor,
-.cursor2,
-.cursor3 {
-    border-left: 22px solid transparent;
-    border-right: 22px solid transparent;
-    border-bottom: 10px solid var(--color-primary);
-    /* border-radius: 50%; */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
-.cursor2 {
-    border-left: 22px solid transparent;
-    border-right: 22px solid transparent;
-    border-bottom: 22px solid var(--color-primary);
-}
-
-.cursor3 {
-    border-left: 22px solid transparent;
-    border-right: 22px solid transparent;
-    border-bottom: 50px solid var(--color-primary);
-}
 
 /* .......................Start Header Section ......................... */
 header {
     width: 100%;
-    height: 100vh;
-    background: url('./image/bg/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -277,8 +263,8 @@ header {
 header::after {
     content: '';
     width: 100%;
-    height: 5%;
-    background: linear-gradient(to top, #101010c4 0%, transparent 50%, transparent 100%);
+    height: 10%;
+    background: linear-gradient(to top, rgba(16, 16, 16, 0.9) 0%, 50%, transparent 100%);
     position: absolute;
     bottom: 0%;
     left: 0;
@@ -295,6 +281,7 @@ header::before {
     left: 0;
     scale: 1;
     animation: blink 4s infinite linear;
+    z-index: 5;
 }
 
 @keyframes blink {
@@ -353,14 +340,33 @@ header::before {
     position: absolute;
     bottom: 0;
     right: 0;
+    overflow: hidden;
 }
 
+.scene__bg {
+    position: relative;
+    width: 115%;
+    height: 115%;
+    z-index: -2;
+    perspective: 3000px;
+    transform: translate(-5%, 0%);
+}
+
+.scene__bg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transform-style: preserve-3d;
+}
 
 
 
 .flame {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     right: 0;
     height: 100%;
     width: 200%;
@@ -371,22 +377,22 @@ header::before {
 .flame_1 {
     background: url('../assets/image/bg/fire-1.png') 0 0 / auto repeat-x;
     height: 345px;
-    animation: flame 10s .2s infinite ease-in-out;
     filter: drop-shadow(0px -20px 30px rgba(253, 42, 42, 0.493));
+    animation: flame 12s .3s infinite linear;
 
 }
 
 .flame_2 {
     background: url('../assets/image/bg/fire-2.png') 0 0 / auto repeat-x;
     height: 345px;
-    animation: flame 7s .4s infinite ease-in-out;
+    animation: flame 10s infinite reverse linear;
 
 }
 
 .flame_3 {
     background: url('../assets/image/bg/fire-3.png') 0 0 / auto repeat-x;
     height: 200px;
-    animation: flame 8s infinite ease-in-out;
+    animation: flame 8.5s infinite linear;
 }
 
 @keyframes flame {
@@ -395,15 +401,15 @@ header::before {
     }
 
     25% {
-        transform: translate(19%, 2%) rotateZ(0.2deg);
+        transform: translate(21%, 2%) rotateZ(0.2deg);
     }
 
     50% {
-        transform: translate(18%, 4%) rotateZ(0.5deg);
+        transform: translate(20%, 4%) rotateZ(0.5deg);
     }
 
     75% {
-        transform: translate(19%, 2%) rotateZ(0.2deg);
+        transform: translate(19%, 4%) rotateZ(0.5deg);
     }
 
     100% {
@@ -417,8 +423,6 @@ header::before {
     display: inline-block;
     position: relative;
 }
-
-.distortion-text h1 {}
 
 .distortion-text span {
     display: inline-flex;
@@ -497,7 +501,7 @@ header::before {
 
 .about-bg {
     height: 100%;
-    width: 107%;
+    width: 100%;
     background: var(--color-primary);
     border-radius: 10px;
     position: absolute;
@@ -703,6 +707,13 @@ footer p {
 
 /* .......................Start Media Scrin  ......................... */
 /* Max-width:1020px */
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 70px;
+    }
+}
+
 @media (max-width: 1024px) {
     h1 {
         font-size: 50px;
@@ -746,7 +757,7 @@ footer p {
         display: flex;
         flex-direction: column;
         width: 35px;
-        top: 2%;
+        top: 5%;
         right: 5%;
         position: fixed;
         z-index: 50;
@@ -761,11 +772,10 @@ footer p {
         background-color: var(--color-primary);
     }
 
-
-    /* ........Start Header........ */
-    header {
-        height: 72vh;
+    .header-container {
+        padding: 60px 10px;
     }
+
 
     /* ........Start About........ */
 
@@ -782,6 +792,7 @@ footer p {
 }
 
 @media (max-width: 767.98px) {
+
     .about-container {
         gap: 20px;
     }
@@ -795,7 +806,7 @@ footer p {
 /* Max-width:600px */
 @media (max-width: 600px) {
     h1 {
-        font-size: 36px;
+        font-size: 46px;
     }
 
     h2 {
@@ -808,6 +819,11 @@ footer p {
 
     .btn {
         padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 100px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
     }
 
     /* .........Start Aside........ */
@@ -816,16 +832,13 @@ footer p {
     }
 
     /* .........Start Header........ */
-    header {
-        height: 100vh;
-    }
 
     .header-action-aria {
         gap: 10px;
     }
 
     .header-social {
-        gap: 5px;
+        gap: 10px;
     }
 
     .header-social a {
@@ -847,10 +860,6 @@ footer p {
         margin-bottom: 20px;
     }
 
-    .title-flex {}
-
-    h3 {}
-
     .about-text {
         margin-top: 40px;
     }
@@ -866,6 +875,16 @@ footer p {
     /* .........Start Contact........ */
     form {
         width: 100%;
+    }
+}
+
+@media (max-width: 459px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
     }
 }
 
