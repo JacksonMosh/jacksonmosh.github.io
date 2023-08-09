@@ -1,3 +1,17 @@
+let isMobile = {
+    Android: function () { return navigator.userAgent.match(/Android/i); },
+    BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
+    iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
+    Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
+    any: function () {
+        return (
+            isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()
+        );
+    }
+};
+console.log(isMobile);
+
 let MenuBars = document.querySelector('.menu-bars');
 const aside = document.querySelector('aside');
 const body = document.querySelector('body');
@@ -80,7 +94,7 @@ function getRandomValue() {
 distortion.forEach(e => {
 
     e.addEventListener("mouseenter", function () {
-        e.style.cssText = getRandomValue() + 'filter: blur(3px);';
+        e.style.cssText = getRandomValue() + 'filter: blur(1.5px);';
     })
     e.addEventListener("mouseleave", function () {
         setTimeout(function () {
@@ -100,20 +114,17 @@ window.addEventListener("mousemove", function (e) {
     let htmlWidth = document.documentElement.offsetWidth;
     let htmlHeight = document.documentElement.clientHeight;
     let offsetWidth = (e.clientX) - (htmlWidth / 2);
-    let offsetHeight = (e.clientY) - (htmlHeight);
-    console.log(offsetHeight);
+    let offsetHeight = (e.clientY) - (htmlHeight / 2);
     let offsetWidthBg = ((e.clientX) - (htmlWidth / 2));
     let offsetHeightBg = ((e.clientY) - (htmlHeight / 2));
-
     let bg = document.querySelector('.scene__bg');
-    bg.style.cssText = 'right: ' + (offsetWidth * 0.02) + 'px; bottom:' + -(offsetHeight * 0.04) + 'px;';
+    bg.style.cssText = `right: ${(offsetWidth * 0.08)}px; bottom: ${(-offsetHeight * 0.04)}px;`;
     let bgImg = document.querySelector('.scene__bg img');
-    bgImg.style.cssText = `transform: rotateX(${(offsetHeightBg / 700)}deg) rotateY(${offsetWidthBg / 800}deg);`;
-    console.log(bg.style.cssText);
+    bgImg.style.cssText = `transform: rotateX(${(offsetHeightBg / 700)}deg) rotateY(${offsetWidthBg / 500}deg);`;
     flameScene.forEach(() => {
         flameScene[0].style.cssText = 'right: ' + -(offsetWidth * 0.04) + 'px; bottom:' + -(offsetHeight * 0.02) + 'px;';
-        flameScene[1].style.cssText = 'right: ' + -(offsetWidth * 0.06) + 'px; bottom:' + (offsetHeight * 0.04) + 'px;';
-        flameScene[2].style.cssText = 'right: ' + -(offsetWidth * 0.10) + 'px; bottom:' + (offsetHeight * 0.08) + 'px;';
+        flameScene[1].style.cssText = 'right: ' + -(offsetWidth * 0.06) + 'px; bottom:' + (offsetHeight * 0.02) + 'px;';
+        flameScene[2].style.cssText = 'right: ' + -(offsetWidth * 0.10) + 'px; bottom:' + (offsetHeight * 0.04) + 'px;';
     });
 });
 
