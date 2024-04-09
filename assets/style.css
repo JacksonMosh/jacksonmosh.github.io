@@ -161,6 +161,7 @@ aside {
     place-items: center;
 }
 
+
 .aside-container {
     width: 90%;
     height: 90%;
@@ -275,6 +276,19 @@ header::after {
     z-index: 5;
     text-align: center;
     cursor: default;
+}
+.header-wrapper  {
+    display: flex;
+    justify-content:center;align-items: center;
+    position: relative;
+}
+.header-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
 }
 
 .scene {
@@ -417,7 +431,42 @@ header::after {
     }
 }
 
+html.touch .flame_1 {
+    animation: flame_touch 6s .3s infinite linear;
+    animation-direction: alternate-reverse;
+}
 
+html.touch .flame_2 {
+    animation: flame_touch 5s .2s infinite linear;
+    animation-direction: alternate-reverse;
+}
+
+html.touch .flame_3 {
+    animation: flame_touch 4s .1s infinite linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes flame_touch {
+    0% {
+        transform: translate(20%, 10%) rotateZ(0deg);
+    }
+
+    25% {
+        transform: translate(21%, 11%) rotateZ(0.2deg);
+    }
+
+    50% {
+        transform: translate(22%, 10%) rotateZ(0.5deg);
+    }
+
+    75% {
+        transform: translate(23%, 9%) rotateZ(0.5deg);
+    }
+
+    100% {
+        transform: translate(22%, 10%) rotateZ(0deg);
+    }
+}
 
 .distortion-text {
     display: inline-block;
@@ -528,30 +577,22 @@ header::after {
 
 /* .......................Start Skills Section ......................... */
 .skills-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 60px;
 }
 
 .skill {
     background: var(--color-dark);
-    padding: 30px 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     border: 2px solid transparent;
 }
 
-.skill i {
-    font-size: 20px;
-    color: var(--color-white);
-    background: var(--color-primary);
-    border-radius: 50%;
-    padding: 10px;
-}
 
 .skill h4 {
     font-size: 22px;
-    margin: 14px 0;
 }
 
 /* .......................End Skills Section ......................... */
@@ -693,7 +734,8 @@ footer p {
     color: var(--color-primary);
     text-align: center;
 }
-footer p span{
+
+footer p span {
     font-size: 12px;
     font-style: italic;
 }
@@ -799,6 +841,10 @@ footer p span{
 
     .about-left {
         flex: 0 0 40%;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

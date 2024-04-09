@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="view-transition" content="same-origin"> -->
     <title>Front-End Web Developer Jackson Mosh</title>
-    <!--........................ Custom Css Link ......................-->
-    <link rel="stylesheet" href="./assets/style.css">
-    <!--........................ Font Awesome Link ......................-->
-    <!-- <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.css"> -->
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -19,7 +17,7 @@
             <div class="aside-container">
                 <div class="profile">
                     <div class="profile-image">
-                        <img src="./assets/image/hero.jpg" alt="">
+                        <img src="assets/image/hero.jpg" alt="">
                     </div>
                     <h4>Jackson Mosh</h4>
                     <p>Front-End Web Developer</p>
@@ -27,72 +25,83 @@
                 <div class="aside-links">
                     <li>
                         <a href="#Home">
-                            <img src="/assets/image/icons/home.svg" alt=""> Home</a>
+                            <img src="assets/image/icons/home.svg" alt=""> Home</a>
                     </li>
                     <li>
                         <a href="#About">
-                            <img src="/assets/image/icons/about.svg" alt=""> About</a>
+                            <img src="assets/image/icons/about.svg" alt=""> About</a>
                     </li>
                     <li>
                         <a href="#Skills">
-                            <img src="/assets/image/icons/skills.svg" alt=""> Skills</a>
+                            <img src="assets/image/icons/skills.svg" alt=""> Skills</a>
                     </li>
                     <li>
                         <a href="#Services">
-                            <img src="/assets/image/icons/services.svg" alt=""> Services</a>
+                            <img src="assets/image/icons/services.svg" alt=""> Services</a>
                     </li>
                     <li>
-                        <a href="#Photography">
-                            <img src="/assets/image/icons/portfolio.svg" alt=""> Portfolio</a>
+                        <a href="#Portfolio">
+                            <img src="assets/image/icons/portfolio.svg" alt=""> Portfolio</a>
                     </li>
                     <li>
                         <a href="#Contact">
-                            <img src="/assets/image/icons/contacts.svg" alt=""> Contact</a>
+                            <img src="assets/image/icons/contacts.svg" alt=""> Contact</a>
                     </li>
                 </div>
             </div>
-        </aside>
-        <!--........................ End Aside ......................-->
-        <main>
-            <button class="menu-bars">
+            <button type="button" class="menu-bars">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+        </aside>
+        <!--........................ End Aside ......................-->
+        <main>
+
             <!--........................Start Header Section......................-->
             <header id="Home">
                 <div class="container header-container">
+
+
                     <div class="scene">
                         <div class="scene__bg">
-                            <img src="assets/image/bg/bg.webp" alt="">
+                            <img src="assets/image/bg/bg.webp" alt="background_image">
                         </div>
                         <div class="flame flame_1"></div>
                         <div class="flame flame_2"></div>
                         <div class="flame flame_3"></div>
                     </div>
-                    <div class="distortion-text">
-                        <h1><div class="h1-br"></div>
-                            <span>J</span><span>a</span><span>c</span><span>k</span><span>s</span><span>o</span><span>n</span>
-                            <span>M</span><span>o</span><span>s</span><span>h</span>
-                        </h1>
-                        <h2><span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>-</span><span>e</span><span>n</span><span>d</span>
-                            <span>W</span><span>e</span><span>b</span>
-                            <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
-                        </h2>
+
+                    <div class="header-wrapper">
+                        <div class="header-inner">
+                            <div class="distortion-text">
+                                <h1>
+                                    <div class="h1-br"></div>
+                                    <span>J</span><span>a</span><span>c</span><span>k</span><span>s</span><span>o</span><span>n</span>
+                                    <span>M</span><span>o</span><span>s</span><span>h</span>
+                                </h1>
+                                <h2><span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>-</span><span>e</span><span>n</span><span>d</span>
+                                    <span>W</span><span>e</span><span>b</span>
+                                    <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
+                                </h2>
+                            </div>
+                            <div class="header-action-aria">
+                                <a href="#Services" class="btn">Services</a>
+                                <a href="#Contact" class="btn">Let's Talk</a>
+                            </div>
+                            <div class="header-social">
+                                <a href="#" class="btn btn-img">
+                                    <img src="assets/image/upwork.svg" alt="">
+                                </a>
+                                <a href="#" class="btn btn-img">
+                                    <img src="assets/image/linkedin.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header-action-aria">
-                        <a href="#Services" class="btn">Services</a>
-                        <a href="#Contact" class="btn">Let's Talk</a>
-                    </div>
-                    <div class="header-social">
-                        <a href="" class="btn btn-img">
-                            <img src="/assets/image/upwork.svg" alt="">
-                        </a>
-                        <a href="" class="btn btn-img">
-                            <img src="/assets/image/linkedin.svg" alt="">
-                        </a>
-                    </div>
+
+
                 </div>
             </header>
             <!--........................End Header Section ......................-->
@@ -101,7 +110,7 @@
                 <div class="container about-container">
                     <div class="about-left">
                         <div class="about-image">
-                            <img src="./assets/image/hero.jpg" alt="">
+                            <img src="assets/image/hero.jpg" alt="">
                         </div>
                         <div class="about-bg"></div>
                     </div>
@@ -121,7 +130,7 @@
                             <p>
                                 By the way, about fire. I...
                             </p>
-                            <a href="" download="./assets/image/CV.pdf" class="btn">Download CV</a>
+                            <a href="" download="assets/image/CV.pdf" class="btn">Download CV</a>
                         </div>
                     </div>
                 </div>
@@ -140,37 +149,49 @@
                             <div class="title-flex">
                                 <div class="desh"></div>
                             </div>
-                            <h4>HTML&CSS</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum!
-                            </p>
+                            <h4>HTML5</h4>
                         </article>
                         <article class="skill">
                             <div class="title-flex">
                                 <div class="desh"></div>
                             </div>
-                            <h4>Sass</h4>
-                            <p>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, expedita!
-                            </p>
+                            <h4>CSS3</h4>
                         </article>
                         <article class="skill">
                             <div class="title-flex">
                                 <div class="desh"></div>
                             </div>
                             <h4>Javascript</h4>
-                            <p>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vel itaque neque, quos id inventore?
-                            </p>
                         </article>
                         <article class="skill">
                             <div class="title-flex">
                                 <div class="desh"></div>
                             </div>
-                            <h4>React</h4>
-                            <p>
-                                In progress...
-                            </p>
+                            <h4>SASS/SCSS</h4>
+                        </article>
+                        <article class="skill">
+                            <div class="title-flex">
+                                <div class="desh"></div>
+                            </div>
+                            <h4>GULP&Webpack</h4>
+                        </article>
+                        <article class="skill">
+                            <div class="title-flex">
+                                <div class="desh"></div>
+                            </div>
+                            <h4>Figma</h4>
+                        </article>
+                        <article class="skill">
+                            <div class="title-flex">
+                                <div class="desh"></div>
+                            </div>
+                            <h4>WordPress</h4>
+                        </article>
+                        <article class="skill">
+                            <div class="title-flex">
+                                <div class="desh"></div>
+                            </div>
+                            <h4>BEM</h4>
                         </article>
                     </div>
                 </div>
@@ -219,20 +240,37 @@
                 </div>
             </section>
             <!--........................End Services Section ......................-->
-            <!--........................Start Photography Section ......................-->
-            <section id="Photography">
-                <div class="container photography-cotnainer">
+            <!--........................Start Portfolio Section ......................-->
+            <section id="Portfolio">
+                <div class="container portfolio-container">
                     <div class="title-flex">
                         <div class="desh"></div>
                         <p class="p-title">Portfolio</p>
                     </div>
                     <h3>Resent Works</h3>
-                    <div class="photography-content">
+                    <div class="portfolio-content">
+                        <div class="portfolio-content__card card-portfolio">
+                            <div class="card__slider swiper">
+                                <div class="card__wrapper swiper-wrapper">
+                                    <div class="card__slide swiper-slide">
+                                        <div class="card-portfolio__item" style="background-image: url(assets/);">
+                                            <div class="title-flex">
+                                                <div class="desh"></div>
+                                            </div>
+                                            <a href="#" class="card-portfolio__title">
+                                                Tour
+                                            </a>
+                                            <p class="card-portfolio__text"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
-            <!--........................End Photography Section ......................-->
-            <!--........................End Photography Section ......................-->
+            <!--........................End Portfolio Section ......................-->
             <section id="Contact">
                 <div class="container contact-container">
                     <div class="title-flex">
@@ -248,7 +286,6 @@
                     </form>
                 </div>
             </section>
-            <!--........................End Photography Section ......................-->
             <!--........................Start footer Section ......................-->
             <footer>
                 <div class="container">
@@ -261,7 +298,7 @@
 
 
     <!--........................Start Script ......................-->
-    <script src="/assets/script.js">
+    <script src="assets/script.js">
 
     </script>
     <!--........................End Script  ......................-->
